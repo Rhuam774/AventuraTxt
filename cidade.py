@@ -9,9 +9,15 @@ def lin (txt):
     print('******************************************************************************************************************')
     print(txt)
     print('******************************************************************************************************************\n')
-    sleep(3)
+    sleep(4)
     system('cls')
 
+def lin2 (txt):
+    print('******************************************************************************************************************')
+    print(txt)
+    print('******************************************************************************************************************\n')
+    sleep(6)
+    system('cls')
 
 
 
@@ -24,7 +30,7 @@ def Cidade():
     bbb = 0
 
 
-    lin('\nVocê esta na sua casa, olhando pela janela você ver que e dia.')  # ds quer dizer decisão
+    lin('\nVocê esta na sua casa, olhando pela janela você ver que é dia.')  # ds quer dizer decisão
     horario = (14.16)
     while aaa > bbb:
 
@@ -68,10 +74,10 @@ def Cidade():
                 dsauto3 = random.choice(['você acaba de chegar em casa muito cansado', 'Você estava indo pra casa quando derrepente a gasolina do carro acaba!'])
                 if re.search('chegar', dsauto3, re.IGNORECASE):
                     lin(dsauto3)
-                    lin('Você pensa em ir durmir e quando deita na cama você acorda e descobre que foi tudo um sonho')
+                    lin2('Você pensa em ir durmir, quando se deita na cama, logo acorda e descobre que foi tudo um sonho')
                     sys.exit()
-                elif re.search('acabou', dsauto3, re.IGNORECASE):
-                    lin(dsauto3)
+                elif re.search('acaba!', dsauto3, re.IGNORECASE):
+                    lin2(dsauto3)
                     print(f'-- Hoo não, estou longe de casa e já é noite!\n')
                     ds5 = input('Por sorte há um posto á 300 metros! Você então pensa se *vai até ao posto* ou pensa em *fazer um ligação* pra um parente ou amigo trazer. Depois de pensar você decide: ')
                     if re.search('posto', ds5,re.IGNORECASE):
@@ -91,6 +97,9 @@ def Cidade():
                             lin('voltando pro carro você e assautado e está sem celular! Chegando no carro você percebe que o vidro está quebrado e seu som foi levado!')
                             lin('Logo você acorda e percebe que foi apenas um pesadelo! uffa...')
                             sys.exit()
+                        else:
+                            print('error')
+                            sleep(2)
                     elif re.search('ligação', ds5, re.IGNORECASE):
                         lin('Você tenta fazer algumas ligações mais a bateria no celular acaba logo na 2 tentativa!')
                         print('--acho que terei que ir ao posto')
@@ -111,6 +120,10 @@ def Cidade():
                             lin('voltando pro carro você e assautado e está sem celular! Chegando no carro você percebe que o vidro está quebrado e seu som foi levado!')
                             lin('Logo você acorda e percebe que foi apenas um pesadelo! uffa...')
                             sys.exit()
+                        else:
+                            print('error :(')
+                            sleep(3)
+                            sys.exit()
                 else:
                     print('erro ortografico! :(')
             else:
@@ -123,3 +136,85 @@ def Cidade():
             horario += 2.23
         else:
             print('erro ortografico! :(')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        """     █████████                           
+                ██▄████▄█                           
+                █▼▼▼▼▼                              
+                █Jogo_RP, jogo_0.2.1.7beta, pacotej...
+                █▲▲▲▲▲                              
+                █████████                           
+                ██ ██                               
+        """
+
+
+
