@@ -36,14 +36,14 @@ def Cidade():
             if re.search('parque', ds2, re.IGNORECASE):
                 lin('Agora voçe esta no parque!')
                 print('No parque esta chato pois não tem ninguem, todos estão em casa com medo do corona virus (covid-19)\n')
-                sleep(1)
+                sleep(4)
                 lin('Você faz alguns exercicios')
                 sleep(1)
                 ds3 = input('Depois de fazer exercicios você então pensa se vai pra casa ou pro shopping e decide ir: ')
                 if re.search('casa', ds3, re.IGNORECASE):
                     lin('Você chegou em sua casa')
                     ds4 = input('Você chegou em casa, está cansado, quer ir tomar um bannho e dormir ou quer sair pra outro lugar? ')
-                    if re.search('sair', ds4, re.IGNORECASE):
+                    if re.search('outro', ds4, re.IGNORECASE):
                         dsauto = random.choice(['Hoo não, você estava muito cansado e acabou batendo o carro por ter dormido no volante!','Você não conseguiu chegar até ao carro e acabou dormindo na sala de tanto cansaço!'])
                         lin(dsauto)
                         sys.exit()
@@ -52,7 +52,7 @@ def Cidade():
                 elif re.search('shopping', ds3, re.IGNORECASE):
                     lin('Agora você chega ao shopping!')
                     print('hoje o shopping está fechado por conta do corona virus(covid-19)!\n')
-                    sleep(2)
+                    sleep(4)
                     print('Você está voltando pra casa')
                     system('cls')
                     horario += 3.43
@@ -61,17 +61,56 @@ def Cidade():
             elif re.search('shopping', ds2, re.IGNORECASE):
                 lin('Agora você chega ao shopping!')
                 print('hoje o shopping está fechado!')
+                sleep(2)
+                print('Você está voltando pra casa...')
                 sleep(3)
-                print('Você está voltando pra casa')
                 system('cls')
-                dsauto3 = random.choice(['você acaba de chegar em casa muito cansado', 'você estava indo pra casa quando a gasolina do carro acabou!'])
+                dsauto3 = random.choice(['você acaba de chegar em casa muito cansado', 'Você estava indo pra casa quando derrepente a gasolina do carro acaba!'])
                 if re.search('chegar', dsauto3, re.IGNORECASE):
                     lin(dsauto3)
                     lin('Você pensa em ir durmir e quando deita na cama você acorda e descobre que foi tudo um sonho')
                     sys.exit()
                 elif re.search('acabou', dsauto3, re.IGNORECASE):
-                    lin('Você acordou e descobriu que foi apenas um pesadelo!')
-                    sys.exit()
+                    lin(dsauto3)
+                    print(f'-- Hoo não, estou longe de casa e já é noite!\n')
+                    ds5 = input('Por sorte há um posto á 300 metros! Você então pensa se *vai até ao posto* ou pensa em *fazer um ligação* pra um parente ou amigo trazer. Depois de pensar você decide: ')
+                    if re.search('posto', ds5,re.IGNORECASE):
+                        dsauto4 = random.choice(["""'Você vai até ao posto mais quando chega lá, se depara com ele fechado, pois o pessoal do posto está em quarentena por conta do covid-19""","""
+                        Você foi até ao posto e comprou gasolina!"""])
+                        if re.search('comprou', dsauto4, re.IGNORECASE):
+                            lin(dsauto4)
+                            lin('Você voltou pro carro com a gasolina, abasteceu e foi pra casa.')
+                            lin('você está em casa!')
+                            print('-- Estou cansado e vou durmir')
+                            sleep(3)
+                            lin('Você foi durmir e quando se deitou logo acordou e descobriu que foi tudo um sonho.')
+                            lin('É fim.')
+                            sys.exit()
+                        elif re.search('fechado', dsauto4, re.IGNORECASE):
+                            lin(dsauto4)
+                            lin('voltando pro carro você e assautado e está sem celular! Chegando no carro você percebe que o vidro está quebrado e seu som foi levado!')
+                            lin('Logo você acorda e percebe que foi apenas um pesadelo! uffa...')
+                            sys.exit()
+                    elif re.search('ligação', ds5, re.IGNORECASE):
+                        lin('Você tenta fazer algumas ligações mais a bateria no celular acaba logo na 2 tentativa!')
+                        print('--acho que terei que ir ao posto')
+                        sleep(2)
+                        dsauto5 = random.choice([ """'Você vai até ao posto mais quando chega lá, se depara com ele fechado, pois o pessoal do posto está em quarentena por conta do covid-19""", """
+                                                Você vai até ao posto e compra gasolina."""])
+                        if re.search('comprou', dsauto5, re.IGNORECASE):
+                            lin(dsauto5)
+                            lin('Você voltou pro carro com a gasolina, abasteceu e foi pra casa.')
+                            lin('você está em casa!')
+                            print('-- Estou cansado e vou durmir')
+                            sleep(3)
+                            lin('Você foi durmir e quando se deitou logo acordou e descobriu que foi tudo um sonho.')
+                            lin('É fim.')
+                            sys.exit()
+                        elif re.search('fechado', dsauto5, re.IGNORECASE):
+                            lin(dsauto5)
+                            lin('voltando pro carro você e assautado e está sem celular! Chegando no carro você percebe que o vidro está quebrado e seu som foi levado!')
+                            lin('Logo você acorda e percebe que foi apenas um pesadelo! uffa...')
+                            sys.exit()
                 else:
                     print('erro ortografico! :(')
             else:
