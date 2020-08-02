@@ -38,7 +38,7 @@ def Cidade():
                 print('No parque esta chato pois não tem ninguem, todos estão em casa com medo do corona virus (covid-19)\n')
                 sleep(4)
                 lin('Você faz alguns exercicios')
-                sleep(1)
+                sleep(3)
                 ds3 = input('Depois de fazer exercicios você então pensa se vai pra casa ou pro shopping e decide ir: ')
                 if re.search('casa', ds3, re.IGNORECASE):
                     lin('Você chegou em sua casa')
